@@ -1,11 +1,13 @@
 {
   selfHob = "nixpkgs"; /* Remove if merged into nixpkgs */
-  modz = [ "lib" "hyraizyn" ];
+  modz = [ "hyraizyn" ];
 
-  lamdy = uyrld@{ self, lib, hyraizyn }:
+  lamdy = uyrld@{ self, hyraizyn }:
     rec {
+      lib = import (self + /lib);
+
       datom = meik {
-        inherit (uyrld) self lib;
+        inherit self lib;
         localSystem = { system = hyraizyn.astra.sistym; };
       };
 
