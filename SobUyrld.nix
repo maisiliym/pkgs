@@ -14,7 +14,7 @@
       meik =
         meikArgz@
         { self
-        , lib ? uyrld.lib
+        , lib ? lib
         , overlays ? [ ]
         , config ? { allowUnfree = true; }
         , localSystem
