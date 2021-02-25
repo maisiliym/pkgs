@@ -1,5 +1,5 @@
-{
-  selfHob = "nixpkgs"; /* Remove if merged into nixpkgs */
+hob: {
+  self = hob.nixpkgs;
   modz = [ "hyraizyn" ];
 
   lamdy = uyrld@{ self, hyraizyn }:
