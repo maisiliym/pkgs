@@ -1,5 +1,5 @@
 hob: {
-  self = hob.nixpkgs;
+  self = hob.nixpkgs.mein;
   modz = [ "hyraizyn" ];
 
   lamdy = uyrld@{ self, hyraizyn }:
