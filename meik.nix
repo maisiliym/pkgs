@@ -172,7 +172,15 @@ let
     in
     pkgs;
 
+  nullDarwinPkgs = {
+    Cocoa = null;
+    CoreFoundation = null;
+    CoreServices = null;
+  };
+
+  evaluatedPkgs = topLevelFn {
+    inherit overlays config localSystem crossSystem;
+  };
+
 in
-topLevelFn {
-  inherit overlays config localSystem crossSystem;
-}
+evaluatedPkgs // nullDarwinPkgs
